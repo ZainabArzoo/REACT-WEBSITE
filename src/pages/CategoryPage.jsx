@@ -22,7 +22,6 @@ export default function CategoryPage() {
         <div className="container">
             <div className="my-5 text-center">
                 <h1>{categoryName.toUpperCase()}</h1>
-                <p className="text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, officia nihil! Nemo sunt reprehenderit voluptates amet itaque libero in unde, molestias illo veniam, dolore veritatis eaque ipsum. Molestiae, nam architecto!</p>
             </div>
 
             <div className="row">
