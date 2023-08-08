@@ -102,7 +102,7 @@ export default function ProductPage() {
                                     count={5}
                                     size={24}
                                     edit={false}
-                                    value={product.rating}
+                                    value={product.rating && product.rating.rate}
                                     color2={'#ffd700'} />
                             </div>
 
