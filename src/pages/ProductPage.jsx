@@ -4,7 +4,7 @@ import axios from 'axios'
 import ReactStars from 'react-stars'
 import Swal from 'sweetalert2'
 import { GlobalContext } from '../context/context'
-import Cart from '../components/Cart'
+
 
 export default function ProductPage() {
 
@@ -103,7 +103,7 @@ export default function ProductPage() {
                                     size={24}
                                     edit={false}
                                     value={product.rating && product.rating.rate}
-                                    color2={'#ffd700'} />
+                                    color2={'#ff2828'} />
                             </div>
 
                             <div className="my-3">
@@ -114,7 +114,7 @@ export default function ProductPage() {
 
 
                             <button className='btn btn-outline-dark mx-1 fw-bold' onClick={addToCart}>Add to cart</button>
-                            <Cart />
+
                             
                         </div>
 
@@ -151,7 +151,7 @@ export default function ProductPage() {
                                         size={24}
                                         value={ratingstar}
                                         onChange={ratingChanged}
-                                        color2={'#ffd700'}
+                                        color2={'#ff2828'}
                                     />
                                     <span className='ms-3'>({ratingstar})</span>
                                 </div>

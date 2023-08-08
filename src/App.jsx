@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Route, Routes, Navigate } from 'react-router-dom'
+// import React, { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import Login from './pages/Login'
@@ -16,7 +16,7 @@ import Cart from './components/Cart'
 
 export default function App() {
 
-  const [user, setUser] = useState(false)
+  // const [user, setUser] = useState(true)
   return (
     <>
 
@@ -41,6 +41,7 @@ export default function App() {
         //       <Route path="/login" element={<Login />} />
         //       <Route path="/signup" element={<Signup />} />
         //       <Route path="*" element={<Navigate to="/login" replace={true} />} />
+        //       <Route path="/cart" element={<Cart />} />
         //     </Routes>
         //   )
 
