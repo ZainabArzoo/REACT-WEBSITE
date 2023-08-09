@@ -4,7 +4,7 @@ import axios from 'axios'
 import ReactStars from 'react-stars'
 import Swal from 'sweetalert2'
 import { GlobalContext } from '../context/context'
-import Cart from '../components/Cart'
+// import Cart from '../components/Cart'
 
 
 
@@ -116,7 +116,7 @@ export default function ProductPage() {
 
 
                             <button className='btn btn-outline-dark mx-1 fw-bold' onClick={addToCart}>Add to cart</button>
-                            <Cart />
+{/*                             <Cart /> */}
 
                             
                         </div>
