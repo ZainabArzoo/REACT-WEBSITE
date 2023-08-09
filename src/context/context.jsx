@@ -4,12 +4,13 @@ import { reducer } from "./reducer";
 
 const getCartData = () => {
     let cartData = localStorage.getItem('cart')
-    if(cartData == []){
+    if(cartData == 'null'){
         return []
     }
     else{
         return JSON.parse(cartData)
     }
+
 
 }
 
