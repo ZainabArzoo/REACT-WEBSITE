@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import Cart from '../components/Cart'
 
 
 
@@ -19,6 +20,7 @@ function NavigationBar() {
                         <Link className='nav-link' to="/products" style={{color:"black"}}>PRODUCTS</Link>
                         <Link to="/login"><button className="btn btn-outline-dark fw-bold">LOGIN</button></Link>
                         <Link to="/signup"><button className="btn btn-outline-dark fw-bold mx-1">SIGNUP</button></Link>
+                        <Cart />
                         
                     </Nav>
                 </Navbar.Collapse>
