@@ -14,6 +14,8 @@ function Cart() {
     console.log(state);
   }, [show]);
 
+  const cartItems = state?.cart || [];
+
   return (
     <>
       <button
@@ -23,15 +25,16 @@ function Cart() {
       >
         <AiOutlineShoppingCart />
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          {state.cart.length}
+          {cartItems.length}
           <span className="visually-hidden">unread messages</span>
         </span>
       </button>
 
       <Offcanvas show={show} onHide={handleClose} placement="end" name="end">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Cart
-          <button
+          <Offcanvas.Title>
+            Cart
+            <button
               className="btn btn-outline-dark fw-bold my-5 mx-2"
               onClick={() =>
                 dispatch({
@@ -44,27 +47,28 @@ function Cart() {
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {
-            state.cart.map((val, key) => (
-
+          {cartItems.length > 0 ? (
+            cartItems.map((val, key) => (
               <div className="container" key={key}>
                 <div className="row">
                   <div className="col-md-3">
-                    <img className="img-fluid" src={val.image} alt="image" />
+                    <img className="img-fluid" src={val.image} alt="product" />
                   </div>
                   <div className="col-md-9">
-                  <h5>{val.title}</h5>
-                  <button className="btn btn-outline-dark fw-bold">
-                    {val.price}$
-                  </button>
-                  <button className="btn btn-outline-dark fw-bold mx-2">
-                    {val.productQuantity}
-                  </button>
+                    <h5>{val.title}</h5>
+                    <button className="btn btn-outline-dark fw-bold">
+                      {val.price}$
+                    </button>
+                    <button className="btn btn-outline-dark fw-bold mx-2">
+                      {val.productQuantity}
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
             ))
-          }
+          ) : (
+            <p>Your cart is empty</p> 
+          )}
         </Offcanvas.Body>
       </Offcanvas>
     </>
@@ -72,33 +76,3 @@ function Cart() {
 }
 
 export default Cart;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
